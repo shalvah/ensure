@@ -1,0 +1,24 @@
+{
+    "name": "shalvah/ensure",
+    "description": "Clean alternative syntax for enforcing business requirements",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^7.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shalvah Adebayo",
+            "email": "shalvah.adebayo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Shalvah\\Ensure": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
