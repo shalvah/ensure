@@ -67,14 +67,3 @@ class Requirement
         return $result === true;
     }
 }
-
-
-function when($condition)
-{
-    return new Requirement(null, $condition);
-}
-
-function ensure($rule)
-{
-    return new Requirement($rule);
-}

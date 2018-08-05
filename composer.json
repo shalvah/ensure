@@ -16,9 +16,10 @@
     "autoload": {
         "psr-4": {
             "Shalvah\\Ensure\\": "src/"
-        }
+        },
+        "files": ["src/helpers.php"]
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit tests"
     }
 }
