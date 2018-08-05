@@ -28,7 +28,7 @@ ensure($day == 'Saturday')->orElseDeny('Visiting hours are Saturdays only.');
 ensure(function () use ($passenger) {
   $flight = Flight::getFlight($passenger->flightName);
   return $flight && $flight->passengers->includes($passenger->id);
-})->orElseDeny('Visiting hours are Saturdays only.');
+})->orElseDeny('You are not listed for this flight.');
 ```
 
 - You can also use `when` before calling `ensure`, to specify that the rule applies only in certain conditions:
