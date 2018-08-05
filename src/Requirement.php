@@ -29,7 +29,7 @@ class Requirement
      * @param $rule
      * @return $this
      */
-    public function ensure($rule): self
+    public function ensure($rule)
     {
         $this->rules[] = $rule;
         return $this;
@@ -38,9 +38,11 @@ class Requirement
     /**
      * When any of the rules for this requirement fails, a RequirementFailedException will be thrown
      * This method allows you to specify the message and optional data to be passed to the exception
-     *
+     * @param $message
+     * @param mixed|null $data
+     * @throws RequirementFailedException
      */
-    public function orElseDeny(string $message, $data = null)
+    public function orElseDeny($message, $data = null)
     {
         if (!$this->requirementApplies()) {
             return;
