@@ -1,5 +1,9 @@
 # ensure ✋🛑
 
+[![Latest Stable Version](https://poser.pugx.org/shalvah/ensure/v/stable)](https://packagist.org/packages/shalvah/ensure)
+[![Total Downloads](https://poser.pugx.org/shalvah/ensure/downloads)](https://packagist.org/packages/shalvah/ensure)
+[![Build Status](https://travis-ci.com/shalvah/ensure.svg?branch=master)](https://travis-ci.com/shalvah/ensure)
+
 ✌🤩🤩Clean alternative syntax for enforcing business requirements. Useful for when your `if`s get too clunky.
 
 ```php
