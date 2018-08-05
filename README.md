@@ -11,10 +11,11 @@ use function Shalvah\Ensure\when;
 use function Shalvah\Ensure\ensure;
 
 ensure($pilot->isInUniform())
-  ->orElseDeny('Please put on your uniform', $pilot->getUniform());
+  ->orElseDeny('Please put on your uniform', $pilot->uniform);
+
 when(!$pilot->isLicensed())
   ->ensure($flight->isTestFlight())
-  ->orElseDeny('You are only allowed to fly test flights');
+  ->orElseDeny('You are only allowed to fly test flights.');
    
 when(!$flightPlanHasBeenSubmitted)
   ->ensure(
