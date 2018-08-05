@@ -10,7 +10,7 @@
 use function Shalvah\Ensure\when;
 use function Shalvah\Ensure\ensure;
 
-ensure($pilot->isInUniform)
+ensure($pilot->isInUniform())
   ->orElseDeny('Please put on your uniform', $pilot->getUniform());
 when(!$pilot->isLicensed())
   ->ensure($flight->isTestFlight())
@@ -48,7 +48,7 @@ when($couponCodeWasApplied)
 ```php
 try {
   ensure($user->isAllowedToView($product))
-    ->orElseDeny('Sorry, this product is not eligible for promotions.', $this->suggestSimilarProducts($product, $user));
+    ->orElseDeny('This product is not available in your region.', $this->suggestSimilarProducts($product, $user));
 } catch (\Shalvah\Ensure\RequirementFailedException $e) {
     return response()->json([
       'message' => $e->getMessage(),
@@ -56,7 +56,7 @@ try {
     ], 400);
 }
 
-// or you could use set_exception_handller 
+// or you could use set_exception_handller()
 // or whatever mechanism your framework uses
 ```
 
