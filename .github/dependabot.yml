@@ -7,4 +7,4 @@ updates:
     time: "04:00"
   open-pull-requests-limit: 10
   allow:
-    dependency-type: "production"
+  - dependency-type: "production"
